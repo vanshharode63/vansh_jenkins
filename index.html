@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Web Page</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        main {
+            background-color: #fff;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            padding: 20px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #response-message {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Vansh Harode </h1>
+            <p>Intern </p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I'm a passionate frontend developer with a keen interest in user experience design. I love creating intuitive and responsive web applications.</p>
+            </section>
+
+            <section id="services">
+                <h2>Services</h2>
+                <ul>
+                    <li>Intern</li>
+                    
+            </section>
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+                <div id="response-message"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 John Doe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Example: handle form submission, you can customize this part as per your requirement
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+
+            // For demonstration purposes, log the form data
+            console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+
+            // Simulate form submission with a response message
+            let responseMessage = document.getElementById('response-message');
+            responseMessage.innerHTML = `<p>Thank you, ${name}! Your message has been sent.</p>`;
+        });
+    </script>
+</body>
+</html>
