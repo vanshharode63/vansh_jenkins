@@ -1,4 +1,5 @@
-def user_choice(choice, num1, num2):    
+def user_choice(choice, num1, num2):   
+ for choice in range (1,6): 
     if choice == 1 : 
 	    print(f"Your Choice is Addition = {num1+num2} = ")
     elif choice == 2: 
